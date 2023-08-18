@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom Events</title>
+</head>
+<body>
+ <h1 onclick="console.log('Iam a onclick');">Dom er ajke events</h1>  
+ <button onclick="console.log(7);">Click me</button> <br>
+ <button onclick="document.body.style.backgroundColor='tomato'">Click Green</button>
+ <br>
+ <button onclick="makeRed()">
+    Make Red
+ </button>
+ <button id="make-blue">
+    Make Blue
+ </button>
+ <button id="make-orange">
+    Make orange
+ </button>
+ <button id="make-pink">
+    Make Pink
+ </button>
+ <button id="make-yellow">
+    Make Yellow
+ </button>
+ <button id="make-goldenrod">
+    Make Goldenrod
+ </button>
+
+ <script>
+// 2. option
+function makeRed() {
+  document.body.style.backgroundColor = "red";
+}
+// 3.option
+const makeBlueBtn = document.getElementById("make-blue");
+makeBlueBtn.onclick = makeBlue;
+
+function makeBlue() {
+  document.body.style.backgroundColor = "blue";
+}
+// 4.option
+const orangeBtn = document.getElementById("make-orange");
+orangeBtn.onclick = function makeOrange() {
+  document.body.style.backgroundColor = "orange";
+};
+// 5.option
+const pinkBtn = document.getElementById("make-pink");
+pinkBtn = addEventListener("click", makePink);
+
+function makePink() {
+  document.body.style.backgroundColor = "pink";
+}
+
+ </script>
+ <script src="js/events.js"></script>
+ 
+</body>
+</html>

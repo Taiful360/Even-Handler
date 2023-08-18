@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js dom summery</title>
+  </head>
+
+  <body>
+    <h1>I oparate event handler</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">
+      handle event by add onclick function
+    </button>
+
+    <script>
+      function handleOnClick() {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText = "I love my country so much";
+      }
+    </script>
+  </body>
+</html>
